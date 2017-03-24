@@ -7,7 +7,14 @@
  * Controller of the sbAdminApp
  */
 angular.module('sbAdminApp')
-  .controller('ChartCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
+  .controller('ChartCtrl', ['$scope', '$timeout', function ($scope, $timeout,$rootScope) {
+    
+    $scope.$emit("showCommonPopup", {
+                header: 'Welcome',
+                body: "Welcome to Charts",
+                footer: true
+    });
+
     $scope.line = {
 	    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
 	    series: ['Series A', 'Series B'],

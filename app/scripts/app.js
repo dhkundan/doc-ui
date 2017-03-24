@@ -27,12 +27,14 @@ angular
       .state('dashboard', {
         url: '/dashboard',
         templateUrl: 'views/dashboard/main.html',
+        controller: 'modalCtrl',
         resolve: {
           loadMyDirectives: function ($ocLazyLoad) {
             return $ocLazyLoad.load(
               {
                 name: 'sbAdminApp',
                 files: [
+                  'scripts/controllers/modalController.js',
                   'scripts/directives/header/header.js',
                   'scripts/directives/header/header-notification/header-notification.js',
                   'scripts/directives/sidebar/sidebar.js',
